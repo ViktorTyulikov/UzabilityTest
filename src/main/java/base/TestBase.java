@@ -14,7 +14,8 @@ import static com.codeborne.selenide.Selenide.open;
  * Created by ViktorTyulikov on 5/5/2015.
  */
 public class TestBase {
-    private WebDriver driver;
+    protected WebDriver driver;
+    protected static final String BASE_URL = "http://localhost:8080/spring/";
 
     @BeforeMethod
     public void setup() {
@@ -23,7 +24,7 @@ public class TestBase {
         driver.manage().timeouts().pageLoadTimeout(15, TimeUnit.SECONDS);
         driver.manage().timeouts().setScriptTimeout(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
-        driver.get("http://localhost:8080/spring/");
+        driver.get(BASE_URL);
     }
 
     @AfterMethod

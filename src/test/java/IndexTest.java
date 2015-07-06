@@ -17,6 +17,7 @@ import static pages.Header.HEADER_MENU.LOGO;
  */
 public class IndexTest extends TestBase {
 
+    //test
     @Test
     public void checkMenuLinks() {
         for (Header.HEADER_MENU menu : Header.HEADER_MENU.values()) {
